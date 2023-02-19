@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="card-body">
+
+    <p><strong>{{request.user.last_name}} {{request.user.first_name}} {% if person.patronomyc %}{{person.patronomyc}}{% endif %}</strong></p>
+    {% if person.person_pic %}
+    <img width="50" src="{{person.person_pic.url}}" alt="">
+    {% endif %}
+</div>
+
+{% endblock %}
